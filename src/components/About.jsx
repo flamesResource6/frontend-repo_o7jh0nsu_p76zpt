@@ -14,30 +14,36 @@ export default function About() {
               or maintainability.
             </p>
             <div className="mt-6 grid grid-cols-2 gap-3 text-sm">
-              <div className="rounded-xl border border-white/10 bg-white/5 p-4">
+              <motion.div initial={{ opacity: 0, y: 8 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4 }} className="rounded-xl border border-white/10 bg-white/5 p-4">
                 <div className="text-2xl font-semibold text-white">5+ yrs</div>
                 <div className="text-slate-300/80">Experience</div>
-              </div>
-              <div className="rounded-xl border border-white/10 bg-white/5 p-4">
+              </motion.div>
+              <motion.div initial={{ opacity: 0, y: 8 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.45, delay: 0.05 }} className="rounded-xl border border-white/10 bg-white/5 p-4">
                 <div className="text-2xl font-semibold text-white">30+</div>
                 <div className="text-slate-300/80">Projects</div>
-              </div>
-              <div className="rounded-xl border border-white/10 bg-white/5 p-4">
+              </motion.div>
+              <motion.div initial={{ opacity: 0, y: 8 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.1 }} className="rounded-xl border border-white/10 bg-white/5 p-4">
                 <div className="text-2xl font-semibold text-white">10ms</div>
                 <div className="text-slate-300/80">Interaction budget</div>
-              </div>
-              <div className="rounded-xl border border-white/10 bg-white/5 p-4">
+              </motion.div>
+              <motion.div initial={{ opacity: 0, y: 8 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.55, delay: 0.15 }} className="rounded-xl border border-white/10 bg-white/5 p-4">
                 <div className="text-2xl font-semibold text-white">100%</div>
                 <div className="text-slate-300/80">Commitment</div>
-              </div>
+              </motion.div>
             </div>
           </motion.div>
 
           <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.1 }} className="relative">
             <div className="aspect-[4/3] rounded-2xl border border-white/10 bg-gradient-to-br from-slate-900 to-slate-800 p-6">
-              <div className="h-full w-full rounded-xl border border-white/10 bg-[radial-gradient(circle_at_20%_20%,rgba(56,189,248,0.2),transparent_40%),radial-gradient(circle_at_80%_80%,rgba(59,130,246,0.2),transparent_40%)]" />
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="h-full w-full rounded-xl border border-white/10 bg-[radial-gradient(circle_at_20%_20%,rgba(56,189,248,0.2),transparent_40%),radial-gradient(circle_at_80%_80%,rgba(59,130,246,0.2),transparent_40%)]"
+              />
             </div>
-            <div className="absolute -bottom-6 -left-6 h-24 w-24 rounded-xl bg-cyan-400/20 blur-2xl" />
+            <motion.div initial={{ opacity: 0.5 }} animate={{ opacity: [0.5, 0.9, 0.5] }} transition={{ duration: 4, repeat: Infinity }} className="absolute -bottom-6 -left-6 h-24 w-24 rounded-xl bg-cyan-400/20 blur-2xl" />
           </motion.div>
         </div>
       </div>

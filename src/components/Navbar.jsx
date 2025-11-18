@@ -1,5 +1,6 @@
 import React from 'react'
-import { Menu, Github, Linkedin, Mail } from 'lucide-react'
+import { Menu, Github, Linkedin, Mail, Sparkles, Rocket, TerminalSquare, BookOpen } from 'lucide-react'
+import { motion } from 'framer-motion'
 
 const NavLink = ({ href, children }) => (
   <a href={href} className="text-slate-200/80 hover:text-white transition-colors">
@@ -11,15 +12,24 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="mt-6 flex items-center justify-between rounded-2xl border border-white/10 bg-slate-900/60 backdrop-blur supports-[backdrop-filter]:bg-slate-900/40 px-4 sm:px-6 py-3">
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="mt-6 flex items-center justify-between rounded-2xl border border-white/10 bg-slate-900/60 backdrop-blur supports-[backdrop-filter]:bg-slate-900/40 px-4 sm:px-6 py-3 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)]"
+        >
           <div className="flex items-center gap-3">
-            <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-400 shadow-lg shadow-blue-500/30" />
+            <div className="relative">
+              <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-400 shadow-lg shadow-blue-500/30" />
+              <Sparkles className="absolute -bottom-1 -right-1 text-cyan-300" size={14} />
+            </div>
             <span className="font-semibold tracking-tight text-white">Dev Portfolio</span>
           </div>
 
           <nav className="hidden md:flex items-center gap-8">
             <NavLink href="#work">Work</NavLink>
             <NavLink href="#about">About</NavLink>
+            <NavLink href="#skills">Skills</NavLink>
             <NavLink href="#contact">Contact</NavLink>
           </nav>
 
@@ -38,7 +48,7 @@ export default function Navbar() {
           <button className="md:hidden p-2 rounded-md hover:bg-white/5 text-slate-200/80 hover:text-white transition" aria-label="Menu">
             <Menu size={20} />
           </button>
-        </div>
+        </motion.div>
       </div>
     </header>
   )

@@ -22,6 +22,16 @@
   }
 }
 
+/* subtle card hover lift */
+@layer components {
+  .card {
+    @apply rounded-2xl border border-white/10 bg-gradient-to-br from-slate-900/60 to-slate-900/30 shadow-lg shadow-black/20;
+  }
+  .card-hover {
+    @apply transition will-change-transform; 
+  }
+}
+
 /* Custom utility classes for shadcn/ui patterns */
 @layer utilities {
   .animate-in {

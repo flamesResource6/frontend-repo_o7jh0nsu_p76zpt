@@ -1,9 +1,14 @@
 import React from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
+import Services from './components/Services'
 import Projects from './components/Projects'
+import Process from './components/Process'
+import Testimonials from './components/Testimonials'
 import About from './components/About'
+import Skills from './components/Skills'
 import Contact from './components/Contact'
+import FooterCTA from './components/FooterCTA'
 
 function App() {
   return (
@@ -14,9 +19,14 @@ function App() {
       <Navbar />
       <main>
         <Hero />
+        <Services />
         <Projects />
+        <Process />
+        <Testimonials />
         <About />
+        <Skills />
         <Contact />
+        <FooterCTA />
       </main>
 
       <footer className="relative border-t border-white/10 py-8 text-center text-slate-400">
